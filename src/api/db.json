@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "pablo123@gmail.com",
+      "password": "123456",
+      "fullname": "Pablo Almeida",
+      "birthday": "2003-07-04",
+      "job": "Desenvolvedor",
+      "country": "Brasil",
+      "city": "São Paulo",
+      "maritalStatus": "Solteiro",
+      "id": "mcylNL7"
+    }
+  ]
+}
