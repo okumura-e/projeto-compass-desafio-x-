@@ -35,17 +35,17 @@ const LoginForm = () => {
 
   const onSubmit = async (data: FormValues) => {
     try {
-      const { data: user } = await api.get(
-        `users?email=${data.email}&password=${data.password}`,
-      );
-
-      if (user.length) {
-        setUser(user[0]);
-        sessionStorage.setItem("user", JSON.stringify(user[0]));
+      await api.post(
+        '/login', {"email": data.email, "password": data.password}
+      ).then((response) => {
+        setUser(response.data.user);
+        sessionStorage.setItem("token", JSON.stringify(response.data.accessToken));
         navigate("/profile");
-      } else {
-        toast.error("Dados inválidos, tente novamente!");
-      }
+      })
+      .catch((error) => {
+        toast.error(error.response.data);
+      })
+        
     } catch (err) {
       toast.error("Erro ao efetuar login, tente novamente!");
     }
