@@ -10,6 +10,55 @@
       "city": "São Paulo",
       "maritalStatus": "Solteiro",
       "id": "mcylNL7"
+    },
+    {
+      "email": "adriel@gmail.com",
+      "password": "123456",
+      "fullname": "Adriel Itamar",
+      "birthday": "2002-05-25",
+      "job": "Programador",
+      "country": "Brasil",
+      "city": "Paraíso",
+      "maritalStatus": "Solteiro",
+      "id": "vsTPiZY"
+    },
+    {
+      "email": "adriel1@gmail.com",
+      "password": "$2a$10$RUhm7Xc8tN5dPcTAfdV4oOmjsag1MsVzTmLQjjupdP3G4wj9IjRV2",
+      "id": "PsFA_rO"
+    },
+    {
+      "email": "adriel2@gmail.com",
+      "password": "$2a$10$WZsjZELFqh3wEXXdTvEOuuK8tWTFJwCRnsXweJW8pWqBTPMv6oguK",
+      "fullname": "Adriel Itamar Machado Mota",
+      "birthday": "2002-05-25",
+      "job": "Programador",
+      "country": "Brasil",
+      "city": "Paraíso",
+      "maritalStatus": "Casado",
+      "id": "Zn7qBPN"
+    },
+    {
+      "email": "adriel3@gmail.com",
+      "password": "$2a$10$dE4ZhWEWnmwN5QUj50wJl.oSa8F8eXpHyODmJazZaJvmdMvfp9dAa",
+      "fullname": "Adriel Itamar",
+      "birthday": "2002-05-25",
+      "job": "Professor",
+      "country": "Brasil",
+      "city": "Paraíso",
+      "maritalStatus": "Preocupado",
+      "id": "QPYij0v"
+    },
+    {
+      "email": "adriel4@gmail.com",
+      "password": "$2a$10$oZokoVbMAzc0XvAdtLMmx.9gL.5oStkQD0olrHaqS0vlsL9gK4XLq",
+      "fullname": "Adriel Itamar",
+      "birthday": "2002-05-25",
+      "job": "Professor",
+      "country": "Brasil",
+      "city": "Paraíso",
+      "maritalStatus": "Preocupado",
+      "id": "7Vcj2KB"
     }
   ]
 }
