@@ -62,16 +62,17 @@ const FirstStepForm = () => {
         ...data,
         maritalStatus: selectRef.current.value,
       };
-      const response = await api.post("/users", userData);
-
-      if (response.status !== 201) {
-        toast.error("Erro de servidor, por favor, tente novamente!");
-        return;
-      }
-      setUser(userData);
-      sessionStorage.setItem("user", JSON.stringify(userData));
-      navigate("/profile");
-    } catch (err) {
+      await api.post("/users", userData)
+      .then((response) => {
+        setUser(userData);
+        sessionStorage.setItem("token", JSON.stringify(response.data.accessToken));
+        sessionStorage.setItem("user", JSON.stringify(response.data.user));
+        navigate("/profile");
+      })
+      .catch((error) => {
+        toast.error(error.response.data);
+      })
+    } catch (error) {
       toast.error("Erro de servidor, por favor, tente novamente!");
     }
   };
