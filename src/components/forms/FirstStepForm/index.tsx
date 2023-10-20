@@ -65,8 +65,7 @@ const FirstStepForm = () => {
       await api.post("/users", userData)
       .then((response) => {
         setUser(userData);
-        sessionStorage.setItem("token", JSON.stringify(response.data.accessToken));
-        sessionStorage.setItem("user", JSON.stringify(response.data.user));
+        sessionStorage.setItem("token", (response.data.accessToken));
         navigate("/profile");
       })
       .catch((error) => {

@@ -39,7 +39,7 @@ const LoginForm = () => {
         '/login', {"email": data.email, "password": data.password}
       ).then((response) => {
         setUser(response.data.user);
-        sessionStorage.setItem("token", JSON.stringify(response.data.accessToken));
+        sessionStorage.setItem("token", (response.data.accessToken));
         navigate("/profile");
       })
       .catch((error) => {

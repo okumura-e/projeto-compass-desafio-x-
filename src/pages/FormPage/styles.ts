@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import formImage from "../../assets/form-image.png";
+import formImage from "../../assets/imgs/form-image.png";
 
 export const Container = styled.main`
   ${({ theme }) => {
