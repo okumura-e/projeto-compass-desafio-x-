@@ -4,13 +4,13 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import FormPage from "./templates/FormPage";
+import FormPage from "./pages/FormPage";
 import LoginForm from "./components/forms/LoginForm";
 import FirstStepForm from "./components/forms/FirstStepForm";
 import NewPasswordForm from "./components/forms/NewPassword";
-import PerfilPage from "./templates/PerfilPage";
+import PerfilPage from "./pages/PerfilPage";
 import ForgotPasswordForm from "./components/forms/ForgotPassword";
-import EditPerfilPage from "./templates/EditPerfilPage";
+import EditPerfilPage from "./pages/EditPerfilPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
