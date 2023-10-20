@@ -29,24 +29,24 @@
     },
     {
       "email": "adriel2@gmail.com",
-      "password": "$2a$10$WZsjZELFqh3wEXXdTvEOuuK8tWTFJwCRnsXweJW8pWqBTPMv6oguK",
       "fullname": "Adriel Itamar Machado Mota",
-      "birthday": "2002-05-25",
+      "password": "$2a$10$RaVrIVqW/MIXdSiafc6O0.W7nNHSuq/hFuWRrD8JW.32dicYRBkd6",
+      "confirmPassword": "1234567",
       "job": "Programador",
-      "country": "Brasil",
+      "birthday": "2002-05-25",
       "city": "Paraíso",
-      "maritalStatus": "Casado",
+      "country": "Brasil",
       "id": "Zn7qBPN"
     },
     {
       "email": "adriel3@gmail.com",
-      "password": "$2a$10$dE4ZhWEWnmwN5QUj50wJl.oSa8F8eXpHyODmJazZaJvmdMvfp9dAa",
-      "fullname": "Adriel Itamar",
+      "fullname": "Adriel Itamar Machado Mota",
+      "password": "$2a$10$iSUHcq/TnZlS/7eK685uHeSmZAjG47zftpInXYdE7h89AhyaAK94C",
+      "confirmPassword": "123456",
+      "job": "Professora",
       "birthday": "2002-05-25",
-      "job": "Professor",
-      "country": "Brasil",
       "city": "Paraíso",
-      "maritalStatus": "Preocupado",
+      "country": "Brasil",
       "id": "QPYij0v"
     },
     {
