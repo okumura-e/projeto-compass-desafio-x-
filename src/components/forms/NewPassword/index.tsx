@@ -14,6 +14,11 @@ import FormButton from "../../FormButton";
 import FormInput from "../../FormInput";
 import { useForm } from "react-hook-form";
 import BlankCard from "../../cards/BlankCard";
+import { useKeepUser } from "../../../hooks/useKeepUser";
+import { api } from "../../../config/api";
+import toast from "react-hot-toast";
+import { useContext } from "react";
+import { UserContext } from "../../../context/UserContext";
 
 type FormValues = {
   code: string;
@@ -23,7 +28,9 @@ type FormValues = {
 
 const NewPasswordForm = () => {
   const navigate = useNavigate();
-
+  const { setUser } = useContext(UserContext);
+  const { user } = useKeepUser();
+  
   const {
     clearErrors,
     formState: { errors },
@@ -34,9 +41,27 @@ const NewPasswordForm = () => {
 
   const checkPassword = watch("password");
 
-  const onSubmit = () => {
-    navigate("/");
+  const onSubmit = async (data: any) => {
+    try {
+      const response = await api.put(`/users/${user?.id}`, {
+        ...user,
+        password: data.password,  
+      })
+
+      if (response.status === 200) {
+        toast.success("Senha alterada com sucesso!");
+        setUser();
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);        
+      }else {
+        toast.error("Não foi possível alterar a senha!");
+      }
+    } catch (error) {
+      toast.error("Erro de servidor, por favor, tente novamente!");
+    }
   };
+
   return (
     <BlankCard>
       <Logo role="img" />
