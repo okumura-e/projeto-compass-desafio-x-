@@ -18,6 +18,7 @@ import { UserContext } from "../../../context/UserContext";
 import { api } from "../../../config/api";
 
 import { MaritalStatus } from "../../../interfaces/MaritalStatus";
+import Cookies from 'js-cookie';
 
 type FormValues = {
   email: string;
@@ -65,7 +66,8 @@ const FirstStepForm = () => {
       await api.post("/users", userData)
       .then((response) => {
         setUser(userData);
-        sessionStorage.setItem("token", (response.data.accessToken));
+        const token = response.data.accessToken;
+        Cookies.set('token', token, { expires: 1, secure: true, httpOnly: true, sameSite: 'Strict' }); 
         navigate("/profile");
       })
       .catch((error) => {

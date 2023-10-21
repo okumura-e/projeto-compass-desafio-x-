@@ -11,6 +11,7 @@ import { api } from "../../../config/api";
 import toast, { Toaster } from "react-hot-toast";
 import { useContext } from "react";
 import { UserContext } from "../../../context/UserContext";
+import Cookies from 'js-cookie';
 
 const EditInfoCard = () => {
   const { setUser } = useContext(UserContext);
@@ -47,7 +48,7 @@ const EditInfoCard = () => {
     console.log(user);
     
     try {
-      const token = sessionStorage.getItem('token');
+      const token = Cookies.get('token'); 
       const response = await api.put(`/users/${user?.id}`, data, {
         headers: {
           Authorization: `Bearer ${token}`,

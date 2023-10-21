@@ -17,6 +17,7 @@ import BlankCard from "../../cards/BlankCard";
 import { api } from "../../../config/api";
 import { useContext } from "react";
 import { UserContext } from "../../../context/UserContext";
+import Cookies from 'js-cookie';
 
 type FormValues = {
   email: string;
@@ -39,7 +40,8 @@ const LoginForm = () => {
         '/login', {"email": data.email, "password": data.password}
       ).then((response) => {
         setUser(response.data.user);
-        sessionStorage.setItem("token", (response.data.accessToken));
+        const token = response.data.accessToken;
+        Cookies.set('token', token, { expires: 1, secure: true, httpOnly: true, sameSite: 'Strict' }); 
         navigate("/profile");
       })
       .catch((error) => {
