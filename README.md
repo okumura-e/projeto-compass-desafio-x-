@@ -24,6 +24,8 @@ After this you can run a simple `npm run dev` in another terminal and the projec
 - React hook form
 - React Hot Toast
 - Json Server
+- Json Server Auth
+- JavaScript Cookie
 - Axios
 
 ## :page_facing_up: Pages
