@@ -17,8 +17,6 @@ const EditInfoCard = () => {
   const { setUser } = useContext(UserContext);
   const { user } = useKeepUser();
   const navigate = useNavigate();
-  console.log(user);
-  
   const {
     register,
     handleSubmit,
@@ -45,15 +43,15 @@ const EditInfoCard = () => {
   } as { value: string; hasError: boolean });
 
   const onSubmit = async (data: any) => {
-    console.log(user);
-    
     try {
-      const token = Cookies.get('token'); 
-      const response = await api.put(`/users/${user?.id}`, data, {
+      const token = Cookies.get('token');
+      delete data.confirmPassword;
+      const response = await api.put(`/users/${user?.id}`, {...data, maritalStatus: selectRef.current.value}, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
+      
       if (response.status === 200) {
         setUser({ ...user, ...data, maritalStatus: selectRef.current.value });
         toast.success('Perfil editado com sucesso');
