@@ -13,7 +13,7 @@
     },
     {
       "email": "adriel@gmail.com",
-      "password": "123456",
+      "password": "$2a$10$7oIWUQ4PS9AxxpEbOHmVi.dtj3Ydrft8Atnoau3lLysD2njoDTgya",
       "fullname": "Adriel Itamar",
       "birthday": "2002-05-25",
       "job": "Programador",
@@ -41,9 +41,9 @@
     {
       "email": "adriel3@gmail.com",
       "fullname": "Adriel Itamar Machado Mota",
-      "password": "$2a$10$iSUHcq/TnZlS/7eK685uHeSmZAjG47zftpInXYdE7h89AhyaAK94C",
+      "password": "$2a$10$GHg/fAhd9Rgd8v9EC8Z1mOC5R7N2BPh20nTOL8JIVdV7wFNsEyOxy",
       "confirmPassword": "123456",
-      "job": "Professora",
+      "job": "Professor",
       "birthday": "2002-05-25",
       "city": "Paraíso",
       "country": "Brasil",
