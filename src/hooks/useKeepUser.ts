@@ -9,7 +9,7 @@ export function useKeepUser() {
 
   useEffect(() => {
     const token = Cookies.get('token');
-    if (!user || !token) {
+    if (!user) {
       const recoverData = JSON.parse(sessionStorage.getItem("user") || "{}");
       if (Object.keys(recoverData).length) {
         setUser(recoverData);

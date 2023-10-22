@@ -5,7 +5,7 @@ interface ButtonProps {
   title: string;
   disabled?: boolean;
   isLoading?: boolean;
-  alternative?: boolean;
+  alternative?: boolean | string | any;
   onClick?: () => void;
 }
 

@@ -4,7 +4,7 @@ import { Container, Input, ErrorText } from "./styles";
 
 interface InputProps {
   half?: boolean;
-  error?: string;
+  error?: string | boolean ;
   registerField?: UseFormRegisterReturn;
 }
 

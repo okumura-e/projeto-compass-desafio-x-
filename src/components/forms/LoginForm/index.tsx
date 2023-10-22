@@ -72,7 +72,7 @@ const LoginForm = () => {
               },
             }),
           }}
-          error={errors?.email?.message}
+          error={errors?.email?.message || ''}
         />
         <FormInput
           type="password"
@@ -86,7 +86,7 @@ const LoginForm = () => {
               },
             }),
           }}
-          error={errors?.password?.message}
+          error={errors?.password?.message || ''}
         />
         <CheckBoxContainer>
           <CheckBox />
@@ -99,7 +99,7 @@ const LoginForm = () => {
         />
         <FormButton
           onClick={() => navigate("/register")}
-          alternative
+          alternative="true"
           title="Criar conta"
         />
       </FormContainer>
