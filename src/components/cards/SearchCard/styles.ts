@@ -36,6 +36,7 @@ export const CardsContainer = styled.section`
 export const Card = styled.section`
   ${({ theme }) => {
     return css`
+      cursor: pointer;
       display: flex;
       color: ${theme.colors.lightestGray};
       font-size: 1.6rem;

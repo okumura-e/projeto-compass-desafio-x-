@@ -11,7 +11,7 @@ import BlankCard from "../BlankCard";
 import { AiOutlineUser } from "react-icons/ai";
 import FormButton from "../../FormButton";
 import { useEffect, useState } from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { api } from "../../../config/api";
 import Cookies from "js-cookie";
 import toast from "react-hot-toast";
@@ -22,12 +22,16 @@ const SearchCard = () => {
     city: string;
     country: string;
     maritalStatus: string;
+    id: string;
+    birthday: string,
+    job: string,
   };
 
   const [users, setUsers] = useState<User[]>([]);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const name = searchParams.get('name');
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getUsers() {
@@ -57,7 +61,7 @@ const SearchCard = () => {
       <CardsContainer>
 
         {users.map((user, index) => (
-          <Card key={index}>
+          <Card key={index} onClick={() => navigate(`/profile/${user?.id}`, { state: { userData: user } })}>
             <CardContainer>
               <UserContainer>
                 <span>
