@@ -7,7 +7,7 @@ import {
   Navbar,
   LinksList,
   LinkHolder,
-  Link,
+  LinkA,
   UserContainer,
   Username,
 } from "./styles";
@@ -15,6 +15,7 @@ import {
 import { AiOutlineUser } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import SearchInput from "../SearchInput";
+import { useEffect, useState } from "react";
 
 interface PerfilHeaderProps {
   username: string;
@@ -22,6 +23,14 @@ interface PerfilHeaderProps {
 }
 
 const PerfilHeader = ({ username, type = "full" }: PerfilHeaderProps) => {
+  const [path, setPath] = useState(window.location.pathname);
+  useEffect(() => {
+    async function getURL() {
+      setPath(window.location.pathname);
+    }
+    getURL()
+  }, [path]);
+
   return (
     <Container>
       <ContentContainer>
@@ -30,16 +39,16 @@ const PerfilHeader = ({ username, type = "full" }: PerfilHeaderProps) => {
           <Navbar>
             <LinksList>
               <LinkHolder>
-                <Link>Início</Link>
+                <LinkA to="">Início</LinkA>
               </LinkHolder>
               <LinkHolder>
-                <Link selected>Perfil</Link>
+                <LinkA selected={path === '/profile'} to="/profile">Perfil</LinkA>
               </LinkHolder>
               <LinkHolder>
-                <Link>Comunidades</Link>
+                <LinkA to="">Comunidades</LinkA>
               </LinkHolder>
               <LinkHolder>
-                <Link>Jogos</Link>
+                <LinkA to="">Jogos</LinkA>
               </LinkHolder>
             </LinksList>
           </Navbar>
