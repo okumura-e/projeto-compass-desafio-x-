@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const Container = styled.header`
   ${({ theme }) => {
@@ -100,12 +101,12 @@ interface LinkProps {
   selected?: boolean;
 }
 
-export const Link = styled.a<LinkProps>`
+export const LinkA = styled(Link)<LinkProps>`
   ${({ theme, selected }) => {
     return css`
       font-size: 1.8rem;
       color: ${theme.colors.content};
-
+      text-decoration: none;
       transition: color 0.2s ease-in-out;
 
       cursor: pointer;
