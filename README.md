@@ -2,7 +2,7 @@
 
 ## :pencil2: Description
 
-It's a alternative application, like the old "orkut", with auth forms, and a profile dashboard.
+It's a alternative application, like the old "orkut", with auth forms, profile dashboard, search users and profiles.
 
 ## :computer: How to run
 
