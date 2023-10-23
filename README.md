@@ -47,19 +47,22 @@ After this you can run a simple `npm run dev` in another terminal and the projec
 │   ├─── hooks
 │   ├─── interfaces
 │   ├─── styles: Contains files like global styles and global theme
-│   ├─── templates: Contains the pages files
+│   ├─── pages: Contains the pages files
 │   └─── utils
 ```
 
-## :sparkles: Extra Features
+## :sparkles: Features
 
 - Login and register forms with real authentication
 - Dynamic Data in profile with Context API and Session Storage
-- Responsiveness to almost all common screen sizes.
 - Error handling server-side, like services offline, or wrong credentials in login, using pop up, made with `react-hot-toast`.
+- Authentication, implementation and correct use of JWT.
+- Search for users by name.
+- When searching, show a list of results, where each result can be clicked to see that user's profile.
+- Functionality to edit the password if the user forgets it.
 
 ## :boom: Problems Faced
 
-We tried to keep a clean html structure, with the minimum div's or span's possible, and in components we tried to avoid to use JS logic to change the layout, keeping the layout changes more in the `styled-components` files, alternating css rules with custom props.
+We tried to keep a clean html structure, with semantic code, and in components we tried to avoid to use JS logic to change the layout, keeping the layout changes in the `styled-components` files, alternating css rules with custom props.
 
 Pages like the main profile page were more hard than we expected, do the grid management without add unnecessary html structure and manipulate only with css was a really good challenge.
