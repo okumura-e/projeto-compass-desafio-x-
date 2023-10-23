@@ -60,7 +60,7 @@ export const UserContainer = styled.div`
       justify-content: center;
 
       width: fit-content;
-      ${theme.medias.desktop} {
+      @media (min-width: 1024px) {
         display: flex;
       }
       span {
@@ -119,6 +119,7 @@ export const CardContainer = styled.div`
 export const CardInfos = styled.div`
   display: flex;
   flex-direction: column;
+  width: 18rem;
 `;
 
 export const friendsName = styled.p`
