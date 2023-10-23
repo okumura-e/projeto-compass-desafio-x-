@@ -33,8 +33,6 @@ const FriendPerfil = () => {
   const [message, setMessage] = useState("Adicionar");
   const location = useLocation();
   const userData = location.state.userData;
-
-  console.log('data',userData);
   
   function handleAdd() {
     if (message === "Adicionar") {
