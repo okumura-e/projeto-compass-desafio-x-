@@ -26,7 +26,6 @@ const router = createBrowserRouter(
     <Route path="/profile/:id" element={<FriendPerfil />} />,
     <Route path="/search" element={<SearchPage />} />,
     <Route path="/edit-profile" element={<EditPerfilPage />} />,
-    <Route path="/friend" element={<EditPerfilPage />} />,
   ]),
 );
 
