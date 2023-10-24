@@ -41,7 +41,7 @@ const LoginForm = () => {
       ).then((response) => {
         setUser(response.data.user);
         const token = response.data.accessToken;
-        Cookies.set('token', token, { expires: 1, secure: true, httpOnly: true, sameSite: 'Strict' }); 
+        Cookies.set('token', token, { expires: 1, secure: true,  sameSite: 'Strict' }); 
         navigate("/profile");
       })
       .catch((error) => {
