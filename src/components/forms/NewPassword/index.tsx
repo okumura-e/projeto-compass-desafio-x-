@@ -39,9 +39,15 @@ const NewPasswordForm = () => {
     watch,
   } = useForm<FormValues>();
 
+  interface UserData {
+    code: string,
+    password: string,
+    confirmPassword: string,
+  }
+
   const checkPassword = watch("password");
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: UserData) => {
     try {
       const response = await api.put(`/users/${user?.id}`, {
         ...user,

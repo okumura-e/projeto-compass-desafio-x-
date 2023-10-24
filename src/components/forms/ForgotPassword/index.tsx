@@ -32,7 +32,7 @@ const ForgotPasswordForm = () => {
     register,
   } = useForm<FormValues>();
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: {email: string}) => {
     try {
       const response = await api.get(`/users?email=${data.email}`)
       if (response.data.length !== 0) {
